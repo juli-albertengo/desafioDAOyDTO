@@ -18,7 +18,7 @@ app.use('/products', productsRouter);
 const startServer = async() => {
     try{
         const connected = await dbConnection.Get();
-        console.log(connected);
+        //console.log(connected);
         app.listen(8080, ()=> {
             console.log(`App listening on port 8080`);
         })
@@ -28,13 +28,3 @@ const startServer = async() => {
 }
 
 startServer();
-
-/* Prueba
-const main = async() => {
-    await dbConnection.Get();
-    await dbConnection.Get();
-    await dbConnection.Get();
-}
-
-main();
-*/
